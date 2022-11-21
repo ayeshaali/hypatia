@@ -51,15 +51,22 @@ dynamic_state = "dynamic_state_" + str(dynamic_state_update_interval_ms) + "ms_f
 # ]
 a = 1668
 b = 1593
+
+chosen_pairs = []
+pairings = [(1598, 1680), (1593, 1658), (1668, 1593), (1616, 1594), (1608, 1605)]
 full_satellite_network_isls = "starlink_550_isls_plus_grid_ground_stations_top_100_algorithm_free_one_only_over_isls"
-chosen_pairs = [
-    ("starlink_550_isls", a, b, "TcpNewReno", full_satellite_network_isls),
-    ("starlink_550_isls", a, b, "TcpVegas", full_satellite_network_isls),
-    ("starlink_550_isls", a, b, "TcpBbr", full_satellite_network_isls),
-    ("starlink_550_isls", a, b, "TcpWestwood", full_satellite_network_isls),
-    ("starlink_550_isls", a, b, "TcpCubic", full_satellite_network_isls),
-    ("starlink_550_isls", a, b, "TcpHybla", full_satellite_network_isls),
-]
+
+for pair in pairings:
+    a,b = pair
+    experiments = [
+        ("starlink_550_isls", a, b, "TcpNewReno", full_satellite_network_isls),
+        ("starlink_550_isls", a, b, "TcpVegas", full_satellite_network_isls),
+        ("starlink_550_isls", a, b, "TcpBbr", full_satellite_network_isls),
+        ("starlink_550_isls", a, b, "TcpWestwood", full_satellite_network_isls),
+        ("starlink_550_isls", a, b, "TcpCubic", full_satellite_network_isls),
+        ("starlink_550_isls", a, b, "TcpHybla", full_satellite_network_isls),
+    ]
+    chosen_pairs.extend(experiments)
 
 
 def get_tcp_run_list():
