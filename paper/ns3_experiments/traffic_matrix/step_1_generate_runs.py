@@ -49,7 +49,7 @@ pairings = [
 
 for traffic_mode in ["specific", "general"]:
     for movement in ["static", "moving"]:
-        for gs1, gs2 in zip(pairings[::2], pairings[1::2]):
+        for gs1, gs2 in pairings:
 
             # Prepare run directory
             
@@ -94,8 +94,8 @@ for traffic_mode in ["specific", "general"]:
 
                     ###
                     "../../satgenpy_analysis/data/"  
-                    "starlink_550_isls_plus_grid_ground_stations_top_100_algorithm_free_one_only_over_isls/100ms_for_200s"
-                    "manual/data/networkx_path_{gs1}_to_{gs2}.txt".format(gs1, gs2), "r"
+                    "starlink_550_isls_plus_grid_ground_stations_top_100_algorithm_free_one_only_over_isls/100ms_for_200s/"
+                    "manual/data/networkx_path_{gs1}_to_{gs2}.txt".format(gs1=gs1, gs2=gs2), "r"
 
                 ) as f_in:
 
