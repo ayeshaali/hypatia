@@ -35,12 +35,14 @@ for traffic_mode in ["specific", "general"]:
     for movement in ["static", "moving"]:
 
         # Prepare run directory
-        run_dir = "runs/run_" + traffic_mode + "_tm_pairing_kuiper_isls_" + movement
+        
+        run_dir = "runs/run_" + traffic_mode + "_tm_pairing_starlink_isls_" + movement         
+        
         local_shell.remove_force_recursive(run_dir)
         local_shell.make_full_dir(run_dir)
 
         # config_ns3.properties
-        local_shell.copy_file("templates/template_config_ns3.properties", run_dir + "/config_ns3.properties")
+        local_shell.copy_file("templates/template_config_ns3.properties", run_dir + "/config_ns3.properties")      ## made filepath modifications to the .properties file
         local_shell.sed_replace_in_file_plain(
             run_dir + "/config_ns3.properties",
             "[SATELLITE-NETWORK-FORCE-STATIC]",
@@ -60,7 +62,7 @@ for traffic_mode in ["specific", "general"]:
             random.seed(123456789)
             random.randint(0, 100000000)  # Legacy reasons
             seed_from_to = random.randint(0, 100000000)
-            a = set(range(1156, 1256))
+            a = set(range(1584,1684))       
             a.remove(1174)
             a.remove(1229)
             initial_list_from_to = [(1174, 1229), (1229, 1174)]
