@@ -22,9 +22,9 @@
 
 
 ## TO-DO
-## - need to run build.sh to generate satgenpy_analysis/data?
 ## - need to replace exp names (a la #"kuiper_630_isls_plus_grid_ground_stations_top_100_algorithm_free_one_only_over_isls/100ms_for_200s/")
 
+## output - check 'schedule_starlink_550.csv' file
 
 import exputil
 import networkload
@@ -38,13 +38,6 @@ local_shell.remove_force_recursive("pdf")
 local_shell.remove_force_recursive("data")
 
 
-## pairings
-## 1598, 1680
-## 1593, 1658
-## 1668, 1593
-## 1616, 1594
-## 1608, 1605
-
 pairings = [
     (1598, 1680),
     (1593, 1658),
@@ -56,7 +49,7 @@ pairings = [
 
 for traffic_mode in ["specific", "general"]:
     for movement in ["static", "moving"]:
-        for end1, end2 in zip(pairings[::2], pairings[1::2]):
+        for gs1, gs2 in zip(pairings[::2], pairings[1::2]):
 
             # Prepare run directory
             
@@ -82,27 +75,27 @@ for traffic_mode in ["specific", "general"]:
             # Traffic selection
             if traffic_mode == "specific":
 
-                # Create the initial random reciprocal pairing with already one pair known (end1, end2)
+                # Create the initial random reciprocal pairing with already one pair known (gs1, gs2)
                 random.seed(123456789)
                 random.randint(0, 100000000)  # Legacy reasons
                 seed_from_to = random.randint(0, 100000000)
-                a = set(range(1584,1684))       
-                a.remove(end1)
-                a.remove(end2)
-                initial_list_from_to = [(end1, end2), (end2, end1)]
+                a = set(range(1584,1684))     ## starlink GS ID range
+                a.remove(gs1)
+                a.remove(gs2)
+                initial_list_from_to = [(gs1, gs2), (gs2, gs1)]
                 initial_list_from_to = initial_list_from_to + networkload.generate_from_to_reciprocated_random_pairing(
                     list(a),
                     seed_from_to
                 )
 
-                # Find all source and destination satellites of end1 and end2 by going over all its paths
+                # Find all source and destination satellites of gs1 and gs2 by going over all its paths
                 satellite_conflicts_set = set()
                 with open(
 
                     ###
-                    "../../satgenpy_analysis/data/"   ## need to run build.sh to generate?
-                    #"kuiper_630_isls_plus_grid_ground_stations_top_100_algorithm_free_one_only_over_isls/100ms_for_200s/"
-                    "manual/data/networkx_path_{end1}_to_{end2}.txt".format(end1, end2), "r"
+                    "../../satgenpy_analysis/data/"  
+                    "starlink_550_isls_plus_grid_ground_stations_top_100_algorithm_free_one_only_over_isls/100ms_for_200s"
+                    "manual/data/networkx_path_{gs1}_to_{gs2}.txt".format(gs1, gs2), "r"
 
                 ) as f_in:
 
@@ -118,18 +111,18 @@ for traffic_mode in ["specific", "general"]:
                 satellite_conflicts = list(satellite_conflicts_set)
 
                 # Now we need to remove the pairs which are sharing at any
-                # point the source / destination satellite of a path between end1 and end2     ## hms - dont get this comment
+                # point the source / destination satellite of a path between gs1 and gs2     ## hms - dont get this comment
                 conflicting_pairs = []
-                non_conflicting_pairs = [(end1, end2), (end2, end1)]
+                non_conflicting_pairs = [(gs1, gs2), (gs2, gs1)]
                 local_shell.make_full_dir("extra_satgenpy_analysis_data")
-                for p in initial_list_from_to[2:]:  # Of course excluding the starting (end1, end2) and (end2, end1) pairs
+                for p in initial_list_from_to[2:]:  # Of course excluding the starting (gs1, gs2) and (gs2, gs1) pairs
 
                     # Resulting path filename
                     resulting_path_filename = (
 
                             ###
                             "extra_satgenpy_analysis_data/"
-                            #"kuiper_630_isls_plus_grid_ground_stations_top_100_algorithm_free_one_only_over_isls/"
+                            "starlink_550_isls_plus_grid_ground_stations_top_100_algorithm_free_one_only_over_isls/100ms_for_200s"
                             "100ms_for_200s/manual/data/networkx_path_" + str(p[0]) + "_to_" + str(p[1]) + ".txt"
                     )
 
@@ -139,7 +132,7 @@ for traffic_mode in ["specific", "general"]:
                             "cd ../../../satgenpy; python -m satgen.post_analysis.main_print_routes_and_rtt "
                             "../paper/ns3_experiments/traffic_matrix/extra_satgenpy_analysis_data "
                             "../paper/satellite_networks_state/gen_data/"
-                            #"kuiper_630_isls_plus_grid_ground_stations_top_100_algorithm_free_one_only_over_isls "
+                            "starlink_550_isls_plus_grid_ground_stations_top_100_algorithm_free_one_only_over_isls/100ms_for_200s"
                             "100 200 " + str(p[0]) + " " + str(p[1])
                         )
 
@@ -173,7 +166,7 @@ for traffic_mode in ["specific", "general"]:
 
                 # # Check it matches the legacy expectation
                 # if non_conflicting_pairs != [
-                #     (end1, end2), (end2, end1), (1214, 1166), (1166, 1214), (1205, 1251), (1251, 1205), (1165, 1213),
+                #     (gs1, gs2), (gs2, gs1), (1214, 1166), (1166, 1214), (1205, 1251), (1251, 1205), (1165, 1213),
                 #     (1213, 1165), (1244, 1196), (1196, 1244), (1157, 1253), (1253, 1157), (1220, 1167), (1167, 1220),
                 #     (1212, 1197), (1197, 1212), (1178, 1217), (1217, 1178), (1250, 1199), (1199, 1250), (1202, 1163),
                 #     (1163, 1202), (1247, 1198), (1198, 1247), (1238, 1187), (1187, 1238), (1239, 1164), (1164, 1239),
@@ -194,14 +187,14 @@ for traffic_mode in ["specific", "general"]:
 
             elif traffic_mode == "general":
 
-                # Create a random reciprocal pairing with already one pair known (end1, end2)
+                # Create a random reciprocal pairing with already one pair known (gs1, gs2)
                 random.seed(123456789)
                 random.randint(0, 100000000)  # Legacy reasons
                 seed_from_to = random.randint(0, 100000000)
                 a = set(range(1156, 1256))
-                a.remove(end1)
-                a.remove(end2)
-                list_from_to = [(end1, end2), (end2, end1)]
+                a.remove(gs1)
+                a.remove(gs2)
+                list_from_to = [(gs1, gs2), (gs2, gs1)]
                 list_from_to = list_from_to + networkload.generate_from_to_reciprocated_random_pairing(
                     list(a),
                     seed_from_to
