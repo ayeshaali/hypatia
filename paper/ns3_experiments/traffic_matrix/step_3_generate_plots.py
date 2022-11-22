@@ -20,6 +20,11 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 
+
+## TO-DO
+## - correct experiment run in plot_pair_path_max_utilization()
+
+
 import exputil
 
 
@@ -157,12 +162,14 @@ def main():
     for traffic_mode in ["specific", "general"]:
         for movement in ["static", "moving"]:
 
+            ### edit experiment name
+            
             # Pair path max utilization
             plot_pair_path_max_utilization(
                 "../../satgenpy_analysis/data/"
-                "kuiper_630_isls_plus_grid_ground_stations_top_100_algorithm_free_one_only_over_isls/100ms_for_200s"
+                #"kuiper_630_isls_plus_grid_ground_stations_top_100_algorithm_free_one_only_over_isls/100ms_for_200s"
                 "/manual/data",
-                "run_%s_tm_pairing_kuiper_isls_%s" % (traffic_mode, movement),
+                "run_%s_tm_pairing_starlink_isls_%s" % (traffic_mode, movement),
                 1174, 1229, movement == "static"
             )
 
