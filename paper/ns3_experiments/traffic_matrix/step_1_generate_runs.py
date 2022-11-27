@@ -22,8 +22,6 @@
 
 
 ## TO-DO
-## - need to replace exp names (a la #"kuiper_630_isls_plus_grid_ground_stations_top_100_algorithm_free_one_only_over_isls/100ms_for_200s/")
-
 ## output - check 'schedule_starlink_550.csv' file
 
 import exputil
@@ -91,8 +89,6 @@ for traffic_mode in ["specific", "general"]:
                 # Find all source and destination satellites of gs1 and gs2 by going over all its paths
                 satellite_conflicts_set = set()
                 with open(
-
-                    ###
                     "../../satgenpy_analysis/data/"  
                     "starlink_550_isls_plus_grid_ground_stations_top_100_algorithm_free_one_only_over_isls/100ms_for_200s/"
                     "manual/data/networkx_path_{gs1}_to_{gs2}.txt".format(gs1=gs1, gs2=gs2), "r"
@@ -119,10 +115,8 @@ for traffic_mode in ["specific", "general"]:
 
                     # Resulting path filename
                     resulting_path_filename = (
-
-                            ###
                             "extra_satgenpy_analysis_data/"
-                            "starlink_550_isls_plus_grid_ground_stations_top_100_algorithm_free_one_only_over_isls/100ms_for_200s"
+                            "starlink_550_isls_plus_grid_ground_stations_top_100_algorithm_free_one_only_over_isls/"
                             "100ms_for_200s/manual/data/networkx_path_" + str(p[0]) + "_to_" + str(p[1]) + ".txt"
                     )
 
@@ -132,7 +126,7 @@ for traffic_mode in ["specific", "general"]:
                             "cd ../../../satgenpy; python -m satgen.post_analysis.main_print_routes_and_rtt "
                             "../paper/ns3_experiments/traffic_matrix/extra_satgenpy_analysis_data "
                             "../paper/satellite_networks_state/gen_data/"
-                            "starlink_550_isls_plus_grid_ground_stations_top_100_algorithm_free_one_only_over_isls/100ms_for_200s"
+                            "starlink_550_isls_plus_grid_ground_stations_top_100_algorithm_free_one_only_over_isls "
                             "100 200 " + str(p[0]) + " " + str(p[1])
                         )
 
@@ -191,7 +185,7 @@ for traffic_mode in ["specific", "general"]:
                 random.seed(123456789)
                 random.randint(0, 100000000)  # Legacy reasons
                 seed_from_to = random.randint(0, 100000000)
-                a = set(range(1156, 1256))
+                a = set(range(1584,1684))
                 a.remove(gs1)
                 a.remove(gs2)
                 list_from_to = [(gs1, gs2), (gs2, gs1)]

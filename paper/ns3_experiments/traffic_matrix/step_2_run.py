@@ -45,6 +45,8 @@ for traffic_mode in ["specific", "general"]:
                   "2>&1 | tee '../../paper/ns3_experiments/traffic_matrix/" + logs_ns3_dir + "/console.txt'"
         commands_to_run.append(command)
 
+#print(commands_to_run)
+
 # Run the commands
 print("Running commands (at most %d in parallel)..." % max_num_processes)
 for i in range(len(commands_to_run)):
