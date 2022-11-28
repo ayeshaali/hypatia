@@ -1,0 +1,4 @@
+Total intervals.............................. 2000
+Intervals with a path........................ 2000
+Intervals (w/path) with utilization <= 2/3... 384
+19.20% of the intervals have at least 33% unused bandwidth
