@@ -113,48 +113,48 @@ commands_to_run.append("cd ../../satgenpy; python -m satgen.post_analysis.main_p
                        "../paper/satgenpy_analysis/data ../paper/satellite_networks_state/gen_data/"
                        "starlink_550_isls_plus_grid_ground_stations_top_100_algorithm_free_one_only_over_isls "
                        "100 200 1598 1680 "
-                       "> ../paper/satgenpy_analysis/data/command_logs/manual_starlink_isls_1608_to_1650.log 2>&1")
+                       "> ../paper/satgenpy_analysis/data/command_logs/manual_starlink_isls_1598_to_1680.log 2>&1")
 commands_to_run.append("cd ../../satgenpy; python -m satgen.post_analysis.main_print_graphical_routes_and_rtt "
                        "../paper/satgenpy_analysis/data ../paper/satellite_networks_state/gen_data/"
                        "starlink_550_isls_plus_grid_ground_stations_top_100_algorithm_free_one_only_over_isls "
                        "100 200 1598 1680 "
-                       "> ../paper/satgenpy_analysis/data/command_logs/manual_graphical_starlink_isls_1608_to_1650.log"
+                       "> ../paper/satgenpy_analysis/data/command_logs/manual_graphical_starlink_isls_1598_to_1680.log"
                        " 2>&1")
 
 commands_to_run.append("cd ../../satgenpy; python -m satgen.post_analysis.main_print_routes_and_rtt "
                        "../paper/satgenpy_analysis/data ../paper/satellite_networks_state/gen_data/"
                        "starlink_550_isls_plus_grid_ground_stations_top_100_algorithm_free_one_only_over_isls "
                        "100 200 1593 1658 "
-                       "> ../paper/satgenpy_analysis/data/command_logs/manual_starlink_isls_1608_to_1650.log 2>&1")
+                       "> ../paper/satgenpy_analysis/data/command_logs/manual_starlink_isls_1593_to_1658.log 2>&1")
 commands_to_run.append("cd ../../satgenpy; python -m satgen.post_analysis.main_print_graphical_routes_and_rtt "
                        "../paper/satgenpy_analysis/data ../paper/satellite_networks_state/gen_data/"
                        "starlink_550_isls_plus_grid_ground_stations_top_100_algorithm_free_one_only_over_isls "
                        "100 200 1593 1658 "
-                       "> ../paper/satgenpy_analysis/data/command_logs/manual_graphical_starlink_isls_1608_to_1650.log"
+                       "> ../paper/satgenpy_analysis/data/command_logs/manual_graphical_starlink_isls_1593_to_1658.log"
                        " 2>&1")
 
 commands_to_run.append("cd ../../satgenpy; python -m satgen.post_analysis.main_print_routes_and_rtt "
                        "../paper/satgenpy_analysis/data ../paper/satellite_networks_state/gen_data/"
                        "starlink_550_isls_plus_grid_ground_stations_top_100_algorithm_free_one_only_over_isls "
                        "100 200 1668 1593 "
-                       "> ../paper/satgenpy_analysis/data/command_logs/manual_starlink_isls_1608_to_1650.log 2>&1")
+                       "> ../paper/satgenpy_analysis/data/command_logs/manual_starlink_isls_1668_to_1593.log 2>&1")
 commands_to_run.append("cd ../../satgenpy; python -m satgen.post_analysis.main_print_graphical_routes_and_rtt "
                        "../paper/satgenpy_analysis/data ../paper/satellite_networks_state/gen_data/"
                        "starlink_550_isls_plus_grid_ground_stations_top_100_algorithm_free_one_only_over_isls "
                        "100 200 1668 1593 "
-                       "> ../paper/satgenpy_analysis/data/command_logs/manual_graphical_starlink_isls_1608_to_1650.log"
+                       "> ../paper/satgenpy_analysis/data/command_logs/manual_graphical_starlink_isls_1668_to_1593.log"
                        " 2>&1")
 
 commands_to_run.append("cd ../../satgenpy; python -m satgen.post_analysis.main_print_routes_and_rtt "
                        "../paper/satgenpy_analysis/data ../paper/satellite_networks_state/gen_data/"
                        "starlink_550_isls_plus_grid_ground_stations_top_100_algorithm_free_one_only_over_isls "
                        "100 200 1616 1594 "
-                       "> ../paper/satgenpy_analysis/data/command_logs/manual_starlink_isls_1608_to_1650.log 2>&1")
+                       "> ../paper/satgenpy_analysis/data/command_logs/manual_starlink_isls_1616_to_1594.log 2>&1")
 commands_to_run.append("cd ../../satgenpy; python -m satgen.post_analysis.main_print_graphical_routes_and_rtt "
                        "../paper/satgenpy_analysis/data ../paper/satellite_networks_state/gen_data/"
                        "starlink_550_isls_plus_grid_ground_stations_top_100_algorithm_free_one_only_over_isls "
                        "100 200 1616 1594 "
-                       "> ../paper/satgenpy_analysis/data/command_logs/manual_graphical_starlink_isls_1608_to_1650.log"
+                       "> ../paper/satgenpy_analysis/data/command_logs/manual_graphical_starlink_isls_1616_to_1594.log"
                        " 2>&1")
 
 commands_to_run.append("cd ../../satgenpy; python -m satgen.post_analysis.main_print_routes_and_rtt "
