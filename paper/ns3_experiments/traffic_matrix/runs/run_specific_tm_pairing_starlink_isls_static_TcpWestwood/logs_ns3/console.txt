@@ -1,0 +1,298 @@
+Waf: Entering directory `/home/tim/hypatia/ns3-sat-sim/simulator/build/debug_all'
+/bin/sh: 1: ./src/satellite/model/data/cgen: Exec format error
+
+/bin/sh: 1: ./src/satellite/model/data/cgen: Exec format error
+
+Waf: Leaving directory `/home/tim/hypatia/ns3-sat-sim/simulator/build/debug_all'
+Build commands will be stored in build/debug_all/compile_commands.json
+'build' finished successfully (0.822s)
+BASIC SIMULATION START
+  > Date... Sunday November 27, 2022
+  > Time... 21:51:06
+
+CONFIGURE RUN DIRECTORY
+  > Run directory: ../../paper/ns3_experiments/traffic_matrix/runs/run_specific_tm_pairing_starlink_isls_static_TcpWestwood
+  > Logs directory: ../../paper/ns3_experiments/traffic_matrix/runs/run_specific_tm_pairing_starlink_isls_static_TcpWestwood/logs_ns3
+
+CONFIGURATION
+-----
+KEY                                       VALUE
+dynamic_state_update_interval_ns          100000000
+enable_isl_utilization_tracking           true
+enable_tcp_flow_scheduler                 true
+gsl_data_rate_megabit_per_s               10.0
+gsl_max_queue_size_pkts                   100
+isl_data_rate_megabit_per_s               10.0
+isl_max_queue_size_pkts                   100
+isl_utilization_tracking_interval_ns      100000000
+satellite_network_dir                     ../../../../satellite_networks_state/gen_data/starlink_550_isls_plus_grid_ground_stations_top_100_algorithm_free_one_only_over_isls
+satellite_network_force_static            true
+satellite_network_routes_dir              ../../../../satellite_networks_state/gen_data/starlink_550_isls_plus_grid_ground_stations_top_100_algorithm_free_one_only_over_isls/dynamic_state_100ms_for_200s
+simulation_end_time_ns                    200000000000
+simulation_seed                           123456789
+tcp_flow_enable_logging_for_tcp_flow_ids  set(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87)
+tcp_flow_schedule_filename                schedule_starlink_550.csv
+tcp_socket_type                           TcpWestwood
+
+CONFIGURE SIMULATION
+  > Distributed is not enabled
+  > System id........ 0
+  > No. of systems... 1
+  > Seed............. 123456789
+  > Duration......... 200.00 s (200000000000 ns)
+
+TCP OPTIMIZATION BASIC
+  > Clock granularity.......... 1 ns
+  > Initial CWND............... 10 packets
+  > Send buffer size........... 33.554 MB
+  > Receive buffer size........ 33.554 MB
+  > Segment size............... 1380 byte
+  > Timestamp option........... enabled
+  > SACK option................ enabled
+  > Window scaling option...... enabled
+  > Pacing..................... disabled
+
+SATELLITE NETWORK
+  > Number of satellites........ 1584
+  > Number of ground stations... 100
+  > Number of nodes............. 1684
+  > Installed Internet stacks
+  > Reading and creating ISLs
+    >> ISL data rate........ 10 Mbit/s
+    >> ISL max queue size... 100 packets
+    >> Created 3168 ISL(s)
+  > Creating GSLs
+    >> GSL data rate........ 10 Mbit/s
+    >> GSL max queue size... 100 packets
+    >> Read all GSL interfaces information for the 1684 nodes
+    >> Number of GSL interfaces to create... 1684
+    >> Finished install GSL interfaces (interfaces, network devices, one shared channel)
+    >> Finished installing traffic control layer qdisc which will be removed later
+    >> Assigning IP addresses...
+       (with many interfaces, this can take long due to an inefficient IP assignment conflict checker)
+       Progress (as there are more entries, it becomes slower):
+       - 10.04% (t = 0.06 s, update took 0.06 s)
+       - 20.07% (t = 0.13 s, update took 0.06 s)
+       - 30.11% (t = 0.19 s, update took 0.07 s)
+       - 40.14% (t = 0.26 s, update took 0.07 s)
+       - 50.18% (t = 0.33 s, update took 0.07 s)
+       - 60.21% (t = 0.40 s, update took 0.07 s)
+       - 70.25% (t = 0.48 s, update took 0.08 s)
+       - 80.29% (t = 0.56 s, update took 0.08 s)
+       - 90.32% (t = 0.64 s, update took 0.08 s)
+       - 100.00% (t = 0.72 s, update took 0.08 s)
+    >> Finished assigning IPs
+    >> Removing traffic control layers (qdiscs)...
+    >> Finished removing GSL queueing disciplines
+    >> GSL interfaces are setup
+  > Populating ARP caches
+
+SETUP SINGLE FORWARDING ROUTING
+  > Create initial single forwarding state
+  > Setting the routing arbiter on each node
+  > Forward state update interval: 100000000ns
+  > Perform first forwarding state load for t=0
+
+SETUP GSL IF BANDWIDTH HELPER
+  > GSL interface bandwidth update interval: 100000000ns
+  > Perform first GSL interface bandwidth setting for t=0
+
+TCP FLOW SCHEDULER
+  > TCP flow scheduler is enabled
+  > Read schedule (total flow start events: 94)
+  > Removed previous flow log files if present
+  > Setting up TCP flow sinks
+  > Setting up traffic TCP flow starter
+
+UDP BURST SCHEDULER
+  > Not enabled explicitly, so disabled
+
+PINGMESH SCHEDULER
+  > Not enabled explicitly, so disabled
+
+SIMULATION
+Running the simulation for 200.00 simulation seconds...
+ 0.31% - Simulation Time = 0.61 s ::: Wallclock Time = 12.39 s
+Estimated wallclock time remaining: 1 hours 7 minutes
+ 0.48% - Simulation Time = 0.97 s ::: Wallclock Time = 25.74 s
+Estimated wallclock time remaining: 1 hours 28 minutes
+ 0.63% - Simulation Time = 1.25 s ::: Wallclock Time = 37.59 s
+Estimated wallclock time remaining: 1 hours 39 minutes
+ 0.76% - Simulation Time = 1.51 s ::: Wallclock Time = 48.47 s
+Estimated wallclock time remaining: 1 hours 45 minutes
+ 0.91% - Simulation Time = 1.82 s ::: Wallclock Time = 58.72 s
+Estimated wallclock time remaining: 1 hours 46 minutes
+ 1.71% - Simulation Time = 3.42 s ::: Wallclock Time = 80.10 s
+Estimated wallclock time remaining: 1 hours 16 minutes
+ 2.43% - Simulation Time = 4.85 s ::: Wallclock Time = 103.17 s
+Estimated wallclock time remaining: 1 hours 9 minutes
+ 3.00% - Simulation Time = 6.00 s ::: Wallclock Time = 124.62 s
+Estimated wallclock time remaining: 1 hours 7 minutes
+ 3.48% - Simulation Time = 6.96 s ::: Wallclock Time = 146.18 s
+ 3.95% - Simulation Time = 7.90 s ::: Wallclock Time = 169.81 s
+ 4.32% - Simulation Time = 8.64 s ::: Wallclock Time = 190.80 s
+Estimated wallclock time remaining: 1 hours 10 minutes
+ 4.68% - Simulation Time = 9.36 s ::: Wallclock Time = 211.47 s
+ 5.03% - Simulation Time = 10.06 s ::: Wallclock Time = 233.34 s
+ 5.37% - Simulation Time = 10.74 s ::: Wallclock Time = 253.93 s
+ 5.71% - Simulation Time = 11.41 s ::: Wallclock Time = 275.64 s
+ 6.03% - Simulation Time = 12.07 s ::: Wallclock Time = 298.06 s
+Estimated wallclock time remaining: 1 hours 17 minutes
+ 6.36% - Simulation Time = 12.71 s ::: Wallclock Time = 320.37 s
+ 6.67% - Simulation Time = 13.34 s ::: Wallclock Time = 343.78 s
+ 6.98% - Simulation Time = 13.96 s ::: Wallclock Time = 366.27 s
+ 7.28% - Simulation Time = 14.56 s ::: Wallclock Time = 390.75 s
+ 8.16% - Simulation Time = 16.32 s ::: Wallclock Time = 458.29 s
+Estimated wallclock time remaining: 1 hours 25 minutes
+ 9.00% - Simulation Time = 18.00 s ::: Wallclock Time = 526.04 s
+ 9.81% - Simulation Time = 19.63 s ::: Wallclock Time = 592.62 s
+10.60% - Simulation Time = 21.20 s ::: Wallclock Time = 657.53 s
+11.37% - Simulation Time = 22.73 s ::: Wallclock Time = 721.69 s
+12.12% - Simulation Time = 24.23 s ::: Wallclock Time = 787.21 s
+Estimated wallclock time remaining: 1 hours 35 minutes
+12.85% - Simulation Time = 25.70 s ::: Wallclock Time = 850.06 s
+13.75% - Simulation Time = 27.51 s ::: Wallclock Time = 923.39 s
+14.64% - Simulation Time = 29.28 s ::: Wallclock Time = 997.95 s
+15.34% - Simulation Time = 30.68 s ::: Wallclock Time = 1058.90 s
+16.21% - Simulation Time = 32.41 s ::: Wallclock Time = 1133.53 s
+Estimated wallclock time remaining: 1 hours 37 minutes
+17.06% - Simulation Time = 34.12 s ::: Wallclock Time = 1206.08 s
+17.91% - Simulation Time = 35.81 s ::: Wallclock Time = 1280.73 s
+18.57% - Simulation Time = 37.15 s ::: Wallclock Time = 1341.13 s
+19.40% - Simulation Time = 38.80 s ::: Wallclock Time = 1414.02 s
+20.22% - Simulation Time = 40.44 s ::: Wallclock Time = 1489.29 s
+Estimated wallclock time remaining: 1 hours 37 minutes
+21.03% - Simulation Time = 42.07 s ::: Wallclock Time = 1558.78 s
+21.84% - Simulation Time = 43.68 s ::: Wallclock Time = 1621.02 s
+22.65% - Simulation Time = 45.30 s ::: Wallclock Time = 1682.67 s
+23.46% - Simulation Time = 46.92 s ::: Wallclock Time = 1745.62 s
+24.26% - Simulation Time = 48.53 s ::: Wallclock Time = 1808.80 s
+Estimated wallclock time remaining: 1 hours 34 minutes
+25.07% - Simulation Time = 50.14 s ::: Wallclock Time = 1871.61 s
+25.87% - Simulation Time = 51.74 s ::: Wallclock Time = 1936.52 s
+26.67% - Simulation Time = 53.34 s ::: Wallclock Time = 2003.38 s
+27.47% - Simulation Time = 54.94 s ::: Wallclock Time = 2066.56 s
+28.27% - Simulation Time = 56.53 s ::: Wallclock Time = 2132.50 s
+Estimated wallclock time remaining: 1 hours 30 minutes
+29.22% - Simulation Time = 58.44 s ::: Wallclock Time = 2204.83 s
+30.02% - Simulation Time = 60.03 s ::: Wallclock Time = 2267.01 s
+30.81% - Simulation Time = 61.62 s ::: Wallclock Time = 2330.27 s
+31.60% - Simulation Time = 63.21 s ::: Wallclock Time = 2393.36 s
+32.39% - Simulation Time = 64.79 s ::: Wallclock Time = 2453.81 s
+Estimated wallclock time remaining: 1 hours 25 minutes
+33.35% - Simulation Time = 66.69 s ::: Wallclock Time = 2522.67 s
+34.30% - Simulation Time = 68.60 s ::: Wallclock Time = 2588.95 s
+35.25% - Simulation Time = 70.50 s ::: Wallclock Time = 2658.39 s
+36.21% - Simulation Time = 72.41 s ::: Wallclock Time = 2730.42 s
+37.16% - Simulation Time = 74.32 s ::: Wallclock Time = 2802.09 s
+Estimated wallclock time remaining: 1 hours 18 minutes
+38.12% - Simulation Time = 76.23 s ::: Wallclock Time = 2871.45 s
+39.07% - Simulation Time = 78.15 s ::: Wallclock Time = 2940.52 s
+40.03% - Simulation Time = 80.06 s ::: Wallclock Time = 3009.85 s
+40.99% - Simulation Time = 81.98 s ::: Wallclock Time = 3078.99 s
+41.79% - Simulation Time = 83.57 s ::: Wallclock Time = 3139.29 s
+Estimated wallclock time remaining: 1 hours 12 minutes
+42.75% - Simulation Time = 85.49 s ::: Wallclock Time = 3210.36 s
+43.70% - Simulation Time = 87.41 s ::: Wallclock Time = 3282.02 s
+44.50% - Simulation Time = 89.01 s ::: Wallclock Time = 3343.60 s
+45.30% - Simulation Time = 90.60 s ::: Wallclock Time = 3406.03 s
+45.62% - Simulation Time = 91.24 s ::: Wallclock Time = 7463.21 s
+Estimated wallclock time remaining: 2 hours 28 minutes
+46.28% - Simulation Time = 92.57 s ::: Wallclock Time = 7523.87 s
+47.02% - Simulation Time = 94.05 s ::: Wallclock Time = 7589.20 s
+47.77% - Simulation Time = 95.54 s ::: Wallclock Time = 7655.26 s
+48.52% - Simulation Time = 97.04 s ::: Wallclock Time = 7717.75 s
+49.35% - Simulation Time = 98.71 s ::: Wallclock Time = 7783.05 s
+Estimated wallclock time remaining: 2 hours 13 minutes
+50.19% - Simulation Time = 100.39 s ::: Wallclock Time = 7848.98 s
+50.96% - Simulation Time = 101.93 s ::: Wallclock Time = 7911.68 s
+51.74% - Simulation Time = 103.48 s ::: Wallclock Time = 7974.21 s
+52.52% - Simulation Time = 105.04 s ::: Wallclock Time = 8036.34 s
+53.31% - Simulation Time = 106.61 s ::: Wallclock Time = 8097.64 s
+Estimated wallclock time remaining: 1 hours 58 minutes
+54.10% - Simulation Time = 108.20 s ::: Wallclock Time = 8160.16 s
+54.90% - Simulation Time = 109.80 s ::: Wallclock Time = 8223.64 s
+55.70% - Simulation Time = 111.40 s ::: Wallclock Time = 8285.35 s
+56.51% - Simulation Time = 113.02 s ::: Wallclock Time = 8348.53 s
+57.33% - Simulation Time = 114.65 s ::: Wallclock Time = 8411.86 s
+Estimated wallclock time remaining: 1 hours 44 minutes
+58.15% - Simulation Time = 116.29 s ::: Wallclock Time = 8475.01 s
+58.97% - Simulation Time = 117.94 s ::: Wallclock Time = 8540.55 s
+59.72% - Simulation Time = 119.44 s ::: Wallclock Time = 8602.84 s
+60.39% - Simulation Time = 120.77 s ::: Wallclock Time = 8665.33 s
+61.14% - Simulation Time = 122.28 s ::: Wallclock Time = 8730.07 s
+Estimated wallclock time remaining: 1 hours 32 minutes
+61.90% - Simulation Time = 123.80 s ::: Wallclock Time = 8794.59 s
+62.66% - Simulation Time = 125.32 s ::: Wallclock Time = 8858.36 s
+63.43% - Simulation Time = 126.85 s ::: Wallclock Time = 8923.34 s
+64.28% - Simulation Time = 128.56 s ::: Wallclock Time = 8989.74 s
+65.14% - Simulation Time = 130.28 s ::: Wallclock Time = 9055.92 s
+Estimated wallclock time remaining: 1 hours 20 minutes
+66.01% - Simulation Time = 132.01 s ::: Wallclock Time = 9120.40 s
+66.88% - Simulation Time = 133.76 s ::: Wallclock Time = 9184.63 s
+67.67% - Simulation Time = 135.33 s ::: Wallclock Time = 9245.07 s
+68.46% - Simulation Time = 136.92 s ::: Wallclock Time = 9305.75 s
+69.25% - Simulation Time = 138.51 s ::: Wallclock Time = 9367.38 s
+Estimated wallclock time remaining: 1 hours 9 minutes
+70.06% - Simulation Time = 140.11 s ::: Wallclock Time = 9428.96 s
+70.86% - Simulation Time = 141.72 s ::: Wallclock Time = 9491.96 s
+71.67% - Simulation Time = 143.33 s ::: Wallclock Time = 9558.78 s
+72.48% - Simulation Time = 144.96 s ::: Wallclock Time = 9625.75 s
+76.86% - Simulation Time = 153.71 s ::: Wallclock Time = 10018.37 s
+Estimated wallclock time remaining: 50 minutes 16 seconds
+80.18% - Simulation Time = 160.36 s ::: Wallclock Time = 10384.77 s
+83.52% - Simulation Time = 167.04 s ::: Wallclock Time = 10795.26 s
+86.86% - Simulation Time = 173.73 s ::: Wallclock Time = 11208.86 s
+89.65% - Simulation Time = 179.31 s ::: Wallclock Time = 12468.91 s
+92.76% - Simulation Time = 185.52 s ::: Wallclock Time = 12897.87 s
+Estimated wallclock time remaining: 16 minutes 46 seconds
+95.87% - Simulation Time = 191.74 s ::: Wallclock Time = 13299.35 s
+98.99% - Simulation Time = 197.97 s ::: Wallclock Time = 13691.24 s
+Finished simulation.
+Simulation of 200.0 seconds took in wallclock time 13813.5 seconds.
+
+STORE TCP FLOW RESULTS
+  > Opening TCP flow log files:
+    >> Opened: ../../paper/ns3_experiments/traffic_matrix/runs/run_specific_tm_pairing_starlink_isls_static_TcpWestwood/logs_ns3/tcp_flows.csv
+    >> Opened: ../../paper/ns3_experiments/traffic_matrix/runs/run_specific_tm_pairing_starlink_isls_static_TcpWestwood/logs_ns3/tcp_flows.txt
+  > Writing tcp_flows.txt header
+  > Writing log files line-by-line
+  > Total TCP flow log entries to write... 94
+  > Closing TCP flow log files:
+    >> Closed: ../../paper/ns3_experiments/traffic_matrix/runs/run_specific_tm_pairing_starlink_isls_static_TcpWestwood/logs_ns3/tcp_flows.csv
+    >> Closed: ../../paper/ns3_experiments/traffic_matrix/runs/run_specific_tm_pairing_starlink_isls_static_TcpWestwood/logs_ns3/tcp_flows.txt
+  > TCP flow log files have been written
+
+STORE UDP BURST RESULTS
+  > Not enabled, so no UDP burst results are written
+
+STORE PINGMESH RESULTS
+  > Not enabled, so no pingmesh results are written
+
+CLEAN-UP
+  > Simulator is destroyed
+
+TIMING RESULTS
+------
+[    0.0 -     0.0] (0.0 s) :: Configure run and logs directory
+[    0.0 -     0.0] (0.0 s) :: Configure simulator
+[    0.0 -     0.0] (0.0 s) :: Setup TCP parameters
+[    0.0 -     4.2] (4.2 s) :: Create initial single forwarding state
+[    4.2 -    22.7] (18.5 s) :: Setup routing arbiter on each node
+[   22.7 -    24.0] (1.3 s) :: Create initial single forwarding state
+[   24.0 -    24.3] (0.3 s) :: Set first GSL interface bandwidth
+[   24.3 -    24.3] (0.0 s) :: Read flow schedule
+[   24.3 -    24.3] (0.0 s) :: Remove previous flow log files
+[   24.3 -    24.3] (0.1 s) :: Setup TCP flow sinks
+[   24.3 -    24.3] (0.0 s) :: Setup traffic TCP flow starter
+[   24.3 -    24.3] (0.0 s) :: Whatever is between previous timestamp and the simulation run
+[   24.3 - 13837.8] (13813.5 s) :: Run simulation
+[13837.8 - 13837.9] (0.1 s) :: Write TCP flow log files
+[13837.9 - 13841.4] (3.6 s) :: Destroy simulator
+
+BASIC SIMULATION END
+  > Date... Monday November 28, 2022
+  > Time... 01:41:48
+
+double free or corruption (out)
+Command ['/home/tim/hypatia/ns3-sat-sim/simulator/build/debug_all/scratch/main_satnet/main_satnet', '--run_dir=../../paper/ns3_experiments/traffic_matrix/runs/run_specific_tm_pairing_starlink_isls_static_TcpWestwood'] terminated with signal SIGIOT. Run it under a debugger to get more information (./waf --run <program> --gdb").
